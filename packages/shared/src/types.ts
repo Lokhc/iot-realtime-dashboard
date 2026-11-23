@@ -11,7 +11,7 @@ export interface DeviceState {
     deviceId: string;
     lastSeen: number;
     online: boolean;
-    lastReading: SensorReading | null;
+    lastReadings: Partial<Record<Metric, SensorReading>>;
 }
 
 export type AlertLevel = "warning" | "critical";
